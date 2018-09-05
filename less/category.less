@@ -1,0 +1,42 @@
+@import 'base.less';
+#main {
+    background-color: #ccc;
+    .row {
+        display: flex;
+        .cate-left {
+            ul {
+                li {
+                    background-color: #fff;
+                    &.active {
+                        background-color: #ccc;
+                    }
+                    border: 1px solid #ccc;
+                    a {
+                        display: block;
+                        width: 85px;
+                        height: 45px;
+                        line-height: 45px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .cate-right {
+            padding-top: 10px;
+            padding-left: 8px;
+            padding-right: 8px;
+            flex: 1;
+            .mui-row {
+                >div {
+                    background-color: #fff;
+                    img {
+                        width: 100%;
+                    }
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

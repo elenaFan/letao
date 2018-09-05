@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>乐淘</title>
+    <!-- <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/search.less">
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <a class="icon_back btn-search fa fa-arrow-left" href="search.html"></a>
+        <h4>搜索中心</h4>
+    </header>
+    <main id="main">
+        <section id="search1">
+            <div>
+                <input type="text" class="input-search" placeholder="请输入要查询的内容">
+                <button type="button" class="mui-btn mui-btn-primary mui-btn-outlined btn-search">搜索</button>
+            </div>
+        </section>
+        <section id="display1" class="mui-clearfix">
+            <div class="left mui-pull-left">
+                搜索历史
+            </div>
+            <div class="right mui-pull-right">
+                <i class="icon_clear fa fa-trash"></i> 清空记录
+            </div>
+        </section>
+        <section id="record">
+            <ul class="bt-content">
+                <!--    <li class="mui-clearfix">
+                    <div class="left mui-pull-left">1111</div>
+                    <div class="right mui-pull-right"><i class="icon_delete fa fa-close"></i></div>
+                </li> -->
+            </ul>
+        </section>
+    </main>
+    <section id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3"><a href="index.html"><i class="tab_home fa fa-home now"></i><p>首页</p></a></div>
+            <div class="mui-col-xs-3"><a href="category.html"><i class="tab_cate fa fa-bars"></i><p>分类</p></a></div>
+            <div class="mui-col-xs-3"><a href="#"><i class="tab_cart fa fa-shopping-cart"></i><p>购物车</p></a></div>
+            <div class="mui-col-xs-3"><a href="#"><i class="tab_user fa fa-user"></i><p>会员中心</p></a></div>
+        </div>
+    </section>
+    <script id="historyTmp" type="text/html">
+        {{if rows.length>0}} {{each rows value i}}
+        <li class="mui-clearfix">
+            <a href="#">
+                <div class="left mui-pull-left">{{value.search}}</div>
+            </a>
+            <div class="right mui-pull-right">
+                <i class="icon_delete btn-delete fa fa-close" data-id="{{value.id}}"></i>
+            </div>
+        </li>
+        {{/each}} {{else}}
+        <li>
+            <p>没有搜索记录</p>
+        </li>
+        {{/if}}
+    </script>
+    <script src="lib/mui/js/mui.js "></script>
+    <script src="lib/zepto/zepto.min.js "></script>
+    <script src="lib//artTemplate/template-web.js "></script>
+    <script src="js/search.js "></script>
+</body>
+
+</html>

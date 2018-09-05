@@ -1,0 +1,128 @@
+/* 定义全局变量 */
+
+body {
+    background-color: #fff;
+}
+
+@mainColor: #006699;
+
+/* 如果MUI的版本是rem先加一个htmlfontsize */
+
+
+/* 公共的样式放到base.less里面 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /* 防止边框padding超出页面宽度出现滚动条 */
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+    /*一般移动端清除a的点击高亮  透明就表示去掉*/
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    border: none;
+    outline: none;
+    /*清除移动端默认的表单样式*/
+    -webkit-appearance: none;
+}
+
+img {
+    /* 解决图片3px的间距 */
+    vertical-align: middle;
+}
+
+body {
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#main {
+    height: 100%;
+    position: relative;
+}
+
+#header {
+    background-color: @mainColor;
+    height: 45px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 999;
+    padding: 0 45px;
+    .icon_back {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        color: #fff;
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        line-height: 45px;
+    }
+    h4 {
+        margin: 0px;
+        font-weight: normal;
+        text-align: center;
+        width: 100%;
+        line-height: 45px;
+        color: #fff;
+    }
+    form {
+        padding: 5px 0px;
+        input {
+            height: 35px;
+            background-color: #fff;
+            margin: 0px;
+        }
+    }
+    .icon_search {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        color: #fff;
+        width: 50px;
+        height: 100%;
+        text-align: center;
+        line-height: 45px;
+    }
+}
+
+#footer {
+    height: 45px;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding-top: 50px;
+    background-color: @mainColor;
+    padding-top: 6px;
+    .mui-row {
+        >div {
+            a {
+                text-align: center;
+                color: #fff;
+                display: block;
+                i {
+                    display: block;
+                }
+                p {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
